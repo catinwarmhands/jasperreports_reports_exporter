@@ -1,0 +1,24 @@
+{
+    "host_url": "http://localhost:80/jasperserver/",
+    "username": "jasperadmin",
+    "password": "jasperadmin",
+    "output_dir": "output",
+    "batch_export": false,
+    "watermark": true,
+    "commit": false,
+    "file_rename": {
+        "[Mm]y[\\s_][Rr]eports": "prod_reports",
+    },
+    "text_replace": {
+        "[Mm]y[\\s_][Rr]eports": "prod_reports",
+        "DockerPostgres": "ProdPostgres",
+    },
+    "output_rename": {
+        "[\\\\\\\/:<>\"'|?*]+": " ",      // все спецсимволы заменяются на пробел
+        // "[^a-zA-Zа-яА-ЯЁё0-9]+": "_",  // альтернативный вариант, всё кроме букв и цифр заменяется на "_"
+    },
+    "reports": [
+        "/reports/My_Reports",
+        "C:/OPEN_COXA/Development/Reports/acc_info/acc_info.jrxml",
+    ],
+}
